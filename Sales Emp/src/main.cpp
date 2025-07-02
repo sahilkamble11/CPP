@@ -5,8 +5,8 @@
 
 int main() {
    
-    string name1="Alice";
-    string name2="Bob";
+    //string name1="Sahil";
+    //string name2="";
     // Employee emp1(101, name1, 75000.0);
     // Employee emp2(102, name2, 85000.0);
 

@@ -8,18 +8,19 @@ salesEmployee::salesEmployee(){
 }
 
 
-salesEmployee::salesEmployee(int empid, string empname, double salary,int emptarget , double empInsentive):Employee(id,name,salary){
+salesEmployee::salesEmployee(int id, string name, double salary,int emptarget , double empInsentive):Employee(id,name,salary){
+    
+    Employee::displayInfo();
     target=emptarget;
     insentive=empInsentive;
-    name = empname;
+   
 }
 
 
 void salesEmployee::displayInfo(){
       
-      cout<<"Name of Employee= "<<name<<"\nTarget= "<<target<<"\nInsentive= "<<insentive<<endl;
+      cout<<"\nTarget= "<<target<<"\nInsentive= "<<insentive<<endl;
 }
-
 
 salesEmployee::~salesEmployee() {
     // Destructor implementation (if needed)

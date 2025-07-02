@@ -15,7 +15,7 @@ Employee::Employee(){
     salary = 0.0;
 }
 
-Employee::Employee( int empId, string& empName, double empSalary) {
+Employee::Employee( int empId, string &empName, double empSalary) {
     name = empName;
     id = empId;
     salary = empSalary;
