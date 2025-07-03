@@ -1,13 +1,75 @@
-#include "../include/Question.h"
-#include"../include/QuestionBank.h"
-
+#include "../include/FileManager.h"
+#include <iostream>
+#include <vector>
 int main()
 {
+  
 
-    
-    QuestionBank qb; // Create an instance of QuestionBank
+    FileManager fileManager; // Create an instance of FileManager
+    // Example usage of FileManager
 
-    int choice;
+    int choice = 1;
+    while(choice != 4)
+    {
+
+    std::cout << "Please choose an operation:\n";
+
+    //Menu driven program for file read, write and delete operations
+    std::cout << "File Manager Operations:\n";
+    std::cout << "-------------------------\n";
+    std::cout << "1. Read File\n";
+    std::cout << "2. Write File\n";
+    std::cout << "3. Delete File\n";
+    std::cout << "4. Exit\n";
+    cout << "-------------------------\n";
+    std::cout << "Enter your choice: ";
+    std::cin >> choice;
+    std::cin.ignore(); // Clear the newline character from the input buffer
+
+    string filePath= "D://qt.txt";
+    switch (choice) {
+    case 1: {   
+            std::string content;
+          
+            if (fileManager.readFile(filePath, content)) {
+                std::cout << "File content:\n" << content << std::endl;
+                cout<<"--------------------------\n";
+            } else {
+                std::cout << "Failed to read file." << std::endl;
+            }
+        break;
+    }
+
+    case 2: {
+            std::string content;
+            std::cout << "Enter content to write to the file: ";
+            std::getline(std::cin, content);
+            cout<<"--------------------------\n";
+            if (fileManager.writeFile(filePath, content)) {
+                std::cout << "File written successfully." << std::endl;
+            } else {
+                std::cout << "Failed to write file." << std::endl;
+            }
+        break;
+    }
+
+    case 3: {
+            if (fileManager.deleteFile(filePath)) {
+                std::cout << "File deleted successfully." << std::endl;
+            } else {
+                std::cout << "Failed to delete file." << std::endl;
+            }
+        break;
+    }
+    }
+
+    }
+    return 0;
+}
+
+
+
+/*int choice;
     while (choice != 5) {
         cout << "1. Add Question\n";
         cout << "2. Remove Question\n";
@@ -16,7 +78,8 @@ int main()
         cout << "5. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
-        cin.ignore(); // Clear the newline character from the input buffer
+        cin.ignore();
+  } // Clear the newline character from the input buffer
        
     
         switch (choice) {
@@ -122,14 +185,6 @@ int main()
     }
     
     };
-}
 
 
-
-
-
-
-
-
-
-
+*/
