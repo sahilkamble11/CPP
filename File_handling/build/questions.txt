@@ -1,0 +1,5 @@
+1|Math|2+3=?|4|5|6|7|B|1
+2|C programming|What is C Programming?| A markup language used for designing web pages|A high-level programming language used for system and application development|. A database query language used for data manipulation|A software used to design mobile applications|B|3
+1|maths|4+7=????|6|7|8|11|D|2
+4|java|what is java?|a|b|c|d|c|2
+3|C#|What is C#?|a|b|c|d|c|1
