@@ -6,7 +6,7 @@
 
 class QuestionBank {
 private:
-    const string filename = "questions.txt";
+    const string filename = "new.txt";
 
 public:
     void addQuestion(const Question& question);
@@ -15,7 +15,7 @@ public:
     void removeQuestion(int id);
 
     vector<Question> loadFromFile();
-    void saveToFile(const vector<Question>& questions);
+    void saveToFile(const vector<Question> &questions);
 };
 
 #endif

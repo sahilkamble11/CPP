@@ -2,11 +2,12 @@
 #include <fstream>
 #include <iostream>
 
-void QuestionBank::addQuestion(const Question& question) {
+void QuestionBank::addQuestion(const Question &question) {
     ofstream out(filename, ios::app);
     if (out.is_open()) {
         out << question.serialize() << endl;
         out.close();
+        cout<<"\n------------------------------------------\n";
         cout << "Question added successfully.\n";
     } else {
         cerr << "Failed to open file.\n";
@@ -66,7 +67,7 @@ void QuestionBank::removeQuestion(int id) {
     }
     if (found) {
         saveToFile(updatedList);
-        cout << "Question removed successfully.\n";
+        cout << "\nQuestion removed successfully.";
     } else {
         cout << "Question with ID " << id << " not found.\n";
     }
